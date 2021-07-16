@@ -63,16 +63,9 @@
 		3F52D4AB26A16CBF00DD272F /* rs.ios.stage-task8 */ = {
 			isa = PBXGroup;
 			children = (
-				3F52D4AC26A16CBF00DD272F /* AppDelegate.h */,
-				3F52D4AD26A16CBF00DD272F /* AppDelegate.m */,
-				3FB2318126A1C23A00410824 /* RoundedButton.h */,
-				3FB2318226A1C23A00410824 /* RoundedButton.m */,
-				3F52D4B226A16CBF00DD272F /* ViewController.h */,
-				3F52D4B326A16CBF00DD272F /* ViewController.m */,
-				3F52D4B826A16CBF00DD272F /* Assets.xcassets */,
-				3F52D4BA26A16CBF00DD272F /* LaunchScreen.storyboard */,
-				3F52D4BD26A16CBF00DD272F /* Info.plist */,
-				3F52D4BE26A16CBF00DD272F /* main.m */,
+				8432571826A2025000B6E05E /* Controller */,
+				8432571326A2020B00B6E05E /* View */,
+				8432571426A2021F00B6E05E /* Other */,
 				3F52D4CD26A172A100DD272F /* Fonts */,
 			);
 			path = "rs.ios.stage-task8";
@@ -85,6 +78,37 @@
 				3F52D4C926A1729900DD272F /* Montserrat-Regular.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		8432571326A2020B00B6E05E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3FB2318126A1C23A00410824 /* RoundedButton.h */,
+				3FB2318226A1C23A00410824 /* RoundedButton.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8432571426A2021F00B6E05E /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				3F52D4BD26A16CBF00DD272F /* Info.plist */,
+				3F52D4BE26A16CBF00DD272F /* main.m */,
+				3F52D4BA26A16CBF00DD272F /* LaunchScreen.storyboard */,
+				3F52D4B826A16CBF00DD272F /* Assets.xcassets */,
+				3F52D4AC26A16CBF00DD272F /* AppDelegate.h */,
+				3F52D4AD26A16CBF00DD272F /* AppDelegate.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		8432571826A2025000B6E05E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3F52D4B226A16CBF00DD272F /* ViewController.h */,
+				3F52D4B326A16CBF00DD272F /* ViewController.m */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
