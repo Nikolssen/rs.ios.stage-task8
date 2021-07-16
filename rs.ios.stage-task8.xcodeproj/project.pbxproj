@@ -16,6 +16,7 @@
 		3F52D4CC26A1729900DD272F /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F52D4CA26A1729900DD272F /* Montserrat-Medium.ttf */; };
 		3FB2318326A1C23A00410824 /* RoundedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB2318226A1C23A00410824 /* RoundedButton.m */; };
 		8432571B26A2045300B6E05E /* ColorButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8432571A26A2045300B6E05E /* ColorButton.m */; };
+		8432572126A2249C00B6E05E /* ColorPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8432572026A2249C00B6E05E /* ColorPanel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,8 @@
 		3FB2318226A1C23A00410824 /* RoundedButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RoundedButton.m; sourceTree = "<group>"; };
 		8432571926A2045300B6E05E /* ColorButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorButton.h; sourceTree = "<group>"; };
 		8432571A26A2045300B6E05E /* ColorButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorButton.m; sourceTree = "<group>"; };
+		8432571F26A2249C00B6E05E /* ColorPanel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorPanel.h; sourceTree = "<group>"; };
+		8432572026A2249C00B6E05E /* ColorPanel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorPanel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +93,8 @@
 				3FB2318226A1C23A00410824 /* RoundedButton.m */,
 				8432571926A2045300B6E05E /* ColorButton.h */,
 				8432571A26A2045300B6E05E /* ColorButton.m */,
+				8432571F26A2249C00B6E05E /* ColorPanel.h */,
+				8432572026A2249C00B6E05E /* ColorPanel.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -186,6 +191,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8432572126A2249C00B6E05E /* ColorPanel.m in Sources */,
 				3F52D4B426A16CBF00DD272F /* ViewController.m in Sources */,
 				3F52D4AE26A16CBF00DD272F /* AppDelegate.m in Sources */,
 				8432571B26A2045300B6E05E /* ColorButton.m in Sources */,
