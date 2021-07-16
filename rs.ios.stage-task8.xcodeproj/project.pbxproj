@@ -14,6 +14,7 @@
 		3F52D4BF26A16CBF00DD272F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F52D4BE26A16CBF00DD272F /* main.m */; };
 		3F52D4CB26A1729900DD272F /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F52D4C926A1729900DD272F /* Montserrat-Regular.ttf */; };
 		3F52D4CC26A1729900DD272F /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F52D4CA26A1729900DD272F /* Montserrat-Medium.ttf */; };
+		3FB2318326A1C23A00410824 /* RoundedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB2318226A1C23A00410824 /* RoundedButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,8 @@
 		3F52D4BE26A16CBF00DD272F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3F52D4C926A1729900DD272F /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		3F52D4CA26A1729900DD272F /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		3FB2318126A1C23A00410824 /* RoundedButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RoundedButton.h; sourceTree = "<group>"; };
+		3FB2318226A1C23A00410824 /* RoundedButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RoundedButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,8 @@
 			children = (
 				3F52D4AC26A16CBF00DD272F /* AppDelegate.h */,
 				3F52D4AD26A16CBF00DD272F /* AppDelegate.m */,
+				3FB2318126A1C23A00410824 /* RoundedButton.h */,
+				3FB2318226A1C23A00410824 /* RoundedButton.m */,
 				3F52D4B226A16CBF00DD272F /* ViewController.h */,
 				3F52D4B326A16CBF00DD272F /* ViewController.m */,
 				3F52D4B826A16CBF00DD272F /* Assets.xcassets */,
@@ -155,6 +160,7 @@
 				3F52D4B426A16CBF00DD272F /* ViewController.m in Sources */,
 				3F52D4AE26A16CBF00DD272F /* AppDelegate.m in Sources */,
 				3F52D4BF26A16CBF00DD272F /* main.m in Sources */,
+				3FB2318326A1C23A00410824 /* RoundedButton.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
