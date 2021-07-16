@@ -7,6 +7,8 @@
 
 #import "ViewController.h"
 #import "RoundedButton.h"
+#import "ColorButton.h"
+
 @interface ViewController ()
 
 @end
@@ -16,16 +18,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = UIColor.whiteColor;
-    RoundedButton* button = [[RoundedButton alloc] init];
+    ColorButton* button = [[ColorButton alloc] init];
     button.frame = CGRectMake(100, 100, 100, 100);
-    [button setTitle:@"Tittle" forState:UIControlStateNormal];
+    button.keyColor = UIColor.redColor;
+    [button addTarget:self action:@selector(clickButton:) forControlEvents:UIControlEventTouchUpInside];
 
     [self.view addSubview: button];
     button.translatesAutoresizingMaskIntoConstraints = NO;
-    [NSLayoutConstraint activateConstraints:@[ [button.centerYAnchor constraintEqualToAnchor:self.view.centerYAnchor], [button.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor], [button.widthAnchor constraintEqualToConstant:100], [button.heightAnchor constraintEqualToConstant:30]]];
+    [NSLayoutConstraint activateConstraints:@[ [button.centerYAnchor constraintEqualToAnchor:self.view.centerYAnchor], [button.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor], [button.widthAnchor constraintEqualToConstant:40], [button.heightAnchor constraintEqualToConstant:40]]];
     
     // Do any additional setup after loading the view.
 }
 
+-(void) clickButton:(UIButton*) sender{
+    ColorButton* button = (ColorButton*) sender;
+    button.selected = !button.isSelected;
+}
 
 @end

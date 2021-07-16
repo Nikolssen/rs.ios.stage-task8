@@ -15,6 +15,7 @@
 		3F52D4CB26A1729900DD272F /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F52D4C926A1729900DD272F /* Montserrat-Regular.ttf */; };
 		3F52D4CC26A1729900DD272F /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F52D4CA26A1729900DD272F /* Montserrat-Medium.ttf */; };
 		3FB2318326A1C23A00410824 /* RoundedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB2318226A1C23A00410824 /* RoundedButton.m */; };
+		8432571B26A2045300B6E05E /* ColorButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8432571A26A2045300B6E05E /* ColorButton.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,8 @@
 		3F52D4CA26A1729900DD272F /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
 		3FB2318126A1C23A00410824 /* RoundedButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RoundedButton.h; sourceTree = "<group>"; };
 		3FB2318226A1C23A00410824 /* RoundedButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RoundedButton.m; sourceTree = "<group>"; };
+		8432571926A2045300B6E05E /* ColorButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorButton.h; sourceTree = "<group>"; };
+		8432571A26A2045300B6E05E /* ColorButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorButton.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,8 @@
 			children = (
 				3FB2318126A1C23A00410824 /* RoundedButton.h */,
 				3FB2318226A1C23A00410824 /* RoundedButton.m */,
+				8432571926A2045300B6E05E /* ColorButton.h */,
+				8432571A26A2045300B6E05E /* ColorButton.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -183,6 +188,7 @@
 			files = (
 				3F52D4B426A16CBF00DD272F /* ViewController.m in Sources */,
 				3F52D4AE26A16CBF00DD272F /* AppDelegate.m in Sources */,
+				8432571B26A2045300B6E05E /* ColorButton.m in Sources */,
 				3F52D4BF26A16CBF00DD272F /* main.m in Sources */,
 				3FB2318326A1C23A00410824 /* RoundedButton.m in Sources */,
 			);
@@ -320,7 +326,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "rs.ios.stage-task8/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/rs.ios.stage-task8/Other/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -338,7 +344,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "rs.ios.stage-task8/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/rs.ios.stage-task8/Other/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
