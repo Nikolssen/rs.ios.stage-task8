@@ -21,10 +21,6 @@ import UIKit
     private func setupNavigationBar() {
         navigationItem.title = "Artist"
         let barButtonItem = UIBarButtonItem(title: "Drawings", style: .plain, target: self, action: #selector(showMenu(sender:)))
-        let attributes = [NSAttributedString.Key.font : UIFont(name: "Montserrat-Regular", size: 17.0)!, NSAttributedString.Key.foregroundColor : UIColor(named: "Light Green Sea")!]
-        
-        barButtonItem.setTitleTextAttributes(attributes, for: .normal);
-        barButtonItem.setTitleTextAttributes(attributes, for: .highlighted);
 
         navigationItem.rightBarButtonItem = barButtonItem;
     }

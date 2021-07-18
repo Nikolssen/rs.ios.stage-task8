@@ -19,15 +19,20 @@
     UIWindow* window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
     UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:[[DrawingController alloc] init]];
     window.rootViewController = navigationController;
-    [UIBarButtonItem appearance].tintColor =[UIColor colorNamed:@"Light Green Sea"];
-    
-    navigationController.navigationBar.backgroundColor = UIColor.whiteColor;
-    navigationController.navigationBar.titleTextAttributes = @{NSFontAttributeName: [UIFont fontWithName:@"Montserrat-Regular" size:17], NSForegroundColorAttributeName: UIColor.blackColor};
+    [self setupAppearence];
     self.window = window;
     [window makeKeyAndVisible];
     return YES;
 }
 
+- (void) setupAppearence{
+    [UIBarButtonItem appearance].tintColor =[UIColor colorNamed:@"Light Green Sea"];
+    [[UIBarButtonItem appearance] setTitleTextAttributes:@{NSFontAttributeName: [UIFont fontWithName:@"Montserrat-Regular" size:17], NSForegroundColorAttributeName: [UIColor colorNamed:@"Light Green Sea"]} forState:UIControlStateNormal];
+    
+    [[UIBarButtonItem appearance] setTitleTextAttributes:@{NSFontAttributeName: [UIFont fontWithName:@"Montserrat-Regular" size:17], NSForegroundColorAttributeName: [UIColor colorNamed:@"Light Green Sea"]} forState:UIControlStateHighlighted];
+    [UINavigationBar appearance].backgroundColor = UIColor.whiteColor;
+    [UINavigationBar appearance].titleTextAttributes = @{NSFontAttributeName: [UIFont fontWithName:@"Montserrat-Regular" size:17], NSForegroundColorAttributeName: UIColor.blackColor};
+}
 
 
 @end

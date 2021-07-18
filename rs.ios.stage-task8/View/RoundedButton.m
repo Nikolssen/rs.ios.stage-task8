@@ -8,7 +8,6 @@
 #import "RoundedButton.h"
 @interface RoundedButton()
 @property (nonatomic, strong) UIBezierPath* path;
-@property (nonatomic, strong) UILabel* label;
 @end
 
 @implementation RoundedButton
@@ -22,7 +21,7 @@
     self.layer.shadowOpacity = 0.25;
     self.layer.shadowOffset = CGSizeMake(0, 0);
     [self setTitleColor:[UIColor colorNamed:@"Light Green Sea"] forState:UIControlStateNormal];
-    self.titleLabel.font = [UIFont fontWithName:@"Montserat-Regular" size:18];
+    self.titleLabel.font = [UIFont fontWithName:@"Montserrat-Medium" size:18];
     [self unhighlightBorders];
 
 }
