@@ -24,7 +24,7 @@
     [self.view addSubview: panel];
     panel.translatesAutoresizingMaskIntoConstraints = NO;
     [NSLayoutConstraint activateConstraints:@[ [panel.centerYAnchor constraintEqualToAnchor:self.view.centerYAnchor], [panel.centerXAnchor constraintEqualToAnchor:self.view.centerXAnchor], [panel.widthAnchor constraintEqualToConstant:340], [panel.heightAnchor constraintEqualToConstant:100]]];
-    
+    self.navigationItem.title = @"Title";
     // Do any additional setup after loading the view.
 }
 

@@ -17,6 +17,10 @@
 		3FB2318326A1C23A00410824 /* RoundedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB2318226A1C23A00410824 /* RoundedButton.m */; };
 		8432571B26A2045300B6E05E /* ColorButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8432571A26A2045300B6E05E /* ColorButton.m */; };
 		8432572126A2249C00B6E05E /* ColorPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8432572026A2249C00B6E05E /* ColorPanel.m */; };
+		84B38EE326A451DF0091109A /* ChoiceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B38EE126A451DF0091109A /* ChoiceController.m */; };
+		84B38EE826A452030091109A /* Canvas.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B38EE726A452030091109A /* Canvas.m */; };
+		84CB730626A2F62000CBFE43 /* DrawingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CB730426A2F62000CBFE43 /* DrawingController.swift */; };
+		84CB730726A2F62000CBFE43 /* DrawingController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84CB730526A2F62000CBFE43 /* DrawingController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +41,13 @@
 		8432571A26A2045300B6E05E /* ColorButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorButton.m; sourceTree = "<group>"; };
 		8432571F26A2249C00B6E05E /* ColorPanel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorPanel.h; sourceTree = "<group>"; };
 		8432572026A2249C00B6E05E /* ColorPanel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorPanel.m; sourceTree = "<group>"; };
+		84B38EE026A451DF0091109A /* ChoiceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChoiceController.h; sourceTree = "<group>"; };
+		84B38EE126A451DF0091109A /* ChoiceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChoiceController.m; sourceTree = "<group>"; };
+		84B38EE626A452030091109A /* Canvas.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Canvas.h; sourceTree = "<group>"; };
+		84B38EE726A452030091109A /* Canvas.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Canvas.m; sourceTree = "<group>"; };
+		84CB72FF26A2F5DB00CBFE43 /* rs.ios.stage-task8-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "rs.ios.stage-task8-Bridging-Header.h"; sourceTree = "<group>"; };
+		84CB730426A2F62000CBFE43 /* DrawingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingController.swift; sourceTree = "<group>"; };
+		84CB730526A2F62000CBFE43 /* DrawingController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrawingController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +106,8 @@
 				8432571A26A2045300B6E05E /* ColorButton.m */,
 				8432571F26A2249C00B6E05E /* ColorPanel.h */,
 				8432572026A2249C00B6E05E /* ColorPanel.m */,
+				84B38EE626A452030091109A /* Canvas.h */,
+				84B38EE726A452030091109A /* Canvas.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -108,6 +121,7 @@
 				3F52D4B826A16CBF00DD272F /* Assets.xcassets */,
 				3F52D4AC26A16CBF00DD272F /* AppDelegate.h */,
 				3F52D4AD26A16CBF00DD272F /* AppDelegate.m */,
+				84CB72FF26A2F5DB00CBFE43 /* rs.ios.stage-task8-Bridging-Header.h */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -117,6 +131,10 @@
 			children = (
 				3F52D4B226A16CBF00DD272F /* ViewController.h */,
 				3F52D4B326A16CBF00DD272F /* ViewController.m */,
+				84B38EE026A451DF0091109A /* ChoiceController.h */,
+				84B38EE126A451DF0091109A /* ChoiceController.m */,
+				84CB730426A2F62000CBFE43 /* DrawingController.swift */,
+				84CB730526A2F62000CBFE43 /* DrawingController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -151,6 +169,7 @@
 				TargetAttributes = {
 					3F52D4A826A16CBF00DD272F = {
 						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1240;
 					};
 				};
 			};
@@ -180,6 +199,7 @@
 				3F52D4CB26A1729900DD272F /* Montserrat-Regular.ttf in Resources */,
 				3F52D4BC26A16CBF00DD272F /* LaunchScreen.storyboard in Resources */,
 				3F52D4CC26A1729900DD272F /* Montserrat-Medium.ttf in Resources */,
+				84CB730726A2F62000CBFE43 /* DrawingController.xib in Resources */,
 				3F52D4B926A16CBF00DD272F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -194,9 +214,12 @@
 				8432572126A2249C00B6E05E /* ColorPanel.m in Sources */,
 				3F52D4B426A16CBF00DD272F /* ViewController.m in Sources */,
 				3F52D4AE26A16CBF00DD272F /* AppDelegate.m in Sources */,
+				84CB730626A2F62000CBFE43 /* DrawingController.swift in Sources */,
+				84B38EE326A451DF0091109A /* ChoiceController.m in Sources */,
 				8432571B26A2045300B6E05E /* ColorButton.m in Sources */,
 				3F52D4BF26A16CBF00DD272F /* main.m in Sources */,
 				3FB2318326A1C23A00410824 /* RoundedButton.m in Sources */,
+				84B38EE826A452030091109A /* Canvas.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,6 +354,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "$(SRCROOT)/rs.ios.stage-task8/Other/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
@@ -340,6 +364,9 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ivan.budovich.rs-ios-stage-task8";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "rs.ios.stage-task8/Other/rs.ios.stage-task8-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -349,6 +376,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "$(SRCROOT)/rs.ios.stage-task8/Other/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
@@ -358,6 +386,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ivan.budovich.rs-ios-stage-task8";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "rs.ios.stage-task8/Other/rs.ios.stage-task8-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

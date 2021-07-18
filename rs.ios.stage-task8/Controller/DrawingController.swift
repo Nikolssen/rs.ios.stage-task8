@@ -7,23 +7,41 @@
 
 import UIKit
 
-class DrawingController: UIViewController {
+@objc class DrawingController: UIViewController {
 
+    var selectedPicture: CanvasPicture = .planet
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupNavigationBar()
 
-        // Do any additional setup after loading the view.
+    }
+    
+    
+    private func setupNavigationBar() {
+        navigationItem.title = "Artist"
+        let barButtonItem = UIBarButtonItem(title: "Drawings", style: .plain, target: self, action: #selector(showMenu(sender:)))
+        let attributes = [NSAttributedString.Key.font : UIFont(name: "Montserrat-Regular", size: 17.0)!, NSAttributedString.Key.foregroundColor : UIColor(named: "Light Green Sea")!]
+        
+        barButtonItem.setTitleTextAttributes(attributes, for: .normal);
+        barButtonItem.setTitleTextAttributes(attributes, for: .highlighted);
+
+        navigationItem.rightBarButtonItem = barButtonItem;
+    }
+    
+    
+   @objc func showMenu(sender: UIBarButtonItem){
+        let controller = ChoiceController(selectedPicture: selectedPicture)
+        controller.delegate = self
+        self.navigationController?.pushViewController(controller, animated: true)
+    
     }
 
 
-    /*
-    // MARK: - Navigation
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+extension DrawingController: ChoiceControllerDelegate{
+    func didSelect(_ selectedPicture: CanvasPicture) {
+        self.selectedPicture = selectedPicture
     }
-    */
-
 }
