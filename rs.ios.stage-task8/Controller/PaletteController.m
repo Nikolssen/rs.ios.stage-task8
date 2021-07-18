@@ -18,15 +18,8 @@
     [super viewDidLoad];
     self.view.layer.masksToBounds = NO;
     self.view.clipsToBounds = NO;
-     CAShapeLayer* maskLayer = [CAShapeLayer new];
-     UIBezierPath* path = [UIBezierPath bezierPathWithRoundedRect:self.view.bounds byRoundingCorners:UIRectCornerTopLeft | UIRectCornerTopRight cornerRadii:CGSizeMake(40, 40)];
-    
-    maskLayer.path = path.CGPath;
-     //self.view.layer.shadowPath = path.CGPath;
-    
-     self.view.layer.mask = maskLayer;
-    self.view.layer.borderColor =  UIColor.blackColor.CGColor;
-    self.view.layer.borderWidth = 1.0;
+    self.view.layer.cornerRadius = 40;
+
     self.view.layer.shadowRadius = 8.0;
     self.view.layer.shadowOpacity = 0.5;
     self.view.layer.shadowOffset = CGSizeMake(0, 0);

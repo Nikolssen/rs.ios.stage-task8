@@ -11,7 +11,7 @@ import UIKit
 
     var selectedPicture: CanvasPicture = .planet
     var selectedColors: [UIColor]?
-    
+    var time: Float = 1.0
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
@@ -38,13 +38,20 @@ import UIKit
         let childVC = PaletteController()
         self.addChild(childVC)
         childVC.delegate = self
-        childVC.view.frame = CGRect(x: 0, y: view.frame.height/2, width: view.frame.width, height: view.frame.height/2)
+        childVC.view.frame = CGRect(x: 0, y: view.frame.height/2, width: view.frame.width, height: view.frame.height/2 + 40)
         view.addSubview(childVC.view)
         childVC.didMove(toParent: self)
         
     }
     
     @IBAction func openTimer(_ sender: Any) {
+        let childVC = TimerController()
+        self.addChild(childVC)
+        //childVC.delegate = self
+        childVC.view.frame = CGRect(x: 0, y: view.frame.height/2, width: view.frame.width, height: view.frame.height/2 + 40)
+        childVC.value = time
+        view.addSubview(childVC.view)
+        childVC.didMove(toParent: self)
     }
 }
 
