@@ -3,3 +3,4 @@
 //
 
 #import "ChoiceController.h"
+#import "PaletteController.h"

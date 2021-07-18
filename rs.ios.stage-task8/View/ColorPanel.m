@@ -9,7 +9,7 @@
 #import "ColorButton.h"
 @interface ColorPanel()
 @property (nonatomic, strong) UIStackView* stackView;
-@property (weak, nonatomic) id<ColorPanelDelegate> delegate;
+
 @property (nonatomic, strong) NSMutableArray <ColorButton*>* selectedButtons;
 @end
 @implementation ColorPanel
