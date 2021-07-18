@@ -44,7 +44,10 @@
         [self highlightBorders];
     }
     else {
-        [self unhighlightBorders];
+        if (!self.isSelected) {
+            [self unhighlightBorders];
+        }
+       
     }
 }
 - (void) setSelected:(BOOL)selected{

@@ -51,9 +51,7 @@
 }
 
 - (void) selectItem: (RoundedButton*) sender{
-    if (self.selectedPicture) {
-        self.buttons[self.selectedPicture].selected = NO;
-    }
+    self.buttons[self.selectedPicture].selected = NO;
     self.selectedPicture = [self.buttons indexOfObject:sender];
     sender.selected = YES;
     if (self.delegate) {
