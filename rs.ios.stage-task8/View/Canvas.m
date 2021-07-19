@@ -6,7 +6,11 @@
 //
 
 #import "Canvas.h"
-#import "HeadLayer.h"
+#import "CanvasLayer.h"
+#import "CanvasLayer+Head.h"
+#import "CanvasLayer+Planet.h"
+#import "CanvasLayer+Landscape.h"
+#import "CanvasLayer+Tree.h"
 @interface Canvas()
 @property (nonatomic, strong) CanvasLayer* currentLayer;
 @end
@@ -28,7 +32,7 @@
 }
 
 - (void) configureLayer{
-    HeadLayer* layer = [HeadLayer new];
+    CanvasLayer* layer = [CanvasLayer canvasLayerHead];
     layer.color1 = UIColor.blackColor;
     layer.color2 = UIColor.blackColor;
     layer.color3 = UIColor.blackColor;
@@ -57,4 +61,28 @@
     _grade = grade;
     self.currentLayer.grade = grade;
 }
+- (void) setPicture:(CanvasPicture)picture{
+    if (_picture != picture){
+        [self.currentLayer removeFromSuperlayer];
+        self.currentLayer = nil;
+        _picture = picture;
+        switch (picture) {
+            case CanvasPictureHead:
+                self.currentLayer = [CanvasLayer canvasLayerHead];
+                break;
+            case CanvasPicturePlanet:
+                self.currentLayer = [CanvasLayer canvasLayerPlanet];
+                break;
+            case CanvasPictureLandscape:
+                self.currentLayer = [CanvasLayer canvasLayerLandscape];
+                break;
+            case CanvasPictureTree:
+                self.currentLayer = [CanvasLayer canvasLayerTree];
+        }
+        self.currentLayer.grade = self.grade;
+        
+    }
+}
+
+
 @end

@@ -13,7 +13,6 @@
 		3F52D4BF26A16CBF00DD272F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F52D4BE26A16CBF00DD272F /* main.m */; };
 		3F52D4CB26A1729900DD272F /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F52D4C926A1729900DD272F /* Montserrat-Regular.ttf */; };
 		3F52D4CC26A1729900DD272F /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F52D4CA26A1729900DD272F /* Montserrat-Medium.ttf */; };
-		3F931FFE26A5C12000F09261 /* HeadLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F931FFD26A5C12000F09261 /* HeadLayer.m */; };
 		3F93200326A5D37800F09261 /* CanvasLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F93200226A5D37800F09261 /* CanvasLayer.m */; };
 		3FB2318326A1C23A00410824 /* RoundedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB2318226A1C23A00410824 /* RoundedButton.m */; };
 		842DD93B26A479A400312D77 /* PaletteController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842DD93926A479A400312D77 /* PaletteController.m */; };
@@ -22,9 +21,10 @@
 		842DD94126A4C15800312D77 /* TimerController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 842DD93F26A4C15800312D77 /* TimerController.xib */; };
 		8432571B26A2045300B6E05E /* ColorButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 8432571A26A2045300B6E05E /* ColorButton.m */; };
 		8432572126A2249C00B6E05E /* ColorPanel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8432572026A2249C00B6E05E /* ColorPanel.m */; };
-		849057A926A5F75E002E3B3B /* PlanetLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 849057A826A5F75E002E3B3B /* PlanetLayer.m */; };
-		849057AD26A5F794002E3B3B /* LandscapeLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 849057AC26A5F794002E3B3B /* LandscapeLayer.m */; };
-		849057B126A5F7A6002E3B3B /* TreeLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 849057B026A5F7A6002E3B3B /* TreeLayer.m */; };
+		849057B626A5F906002E3B3B /* CanvasLayer+Head.m in Sources */ = {isa = PBXBuildFile; fileRef = 849057B526A5F906002E3B3B /* CanvasLayer+Head.m */; };
+		849057BC26A5FB19002E3B3B /* CanvasLayer+Planet.m in Sources */ = {isa = PBXBuildFile; fileRef = 849057BB26A5FB19002E3B3B /* CanvasLayer+Planet.m */; };
+		849057C026A5FB2D002E3B3B /* CanvasLayer+Landscape.m in Sources */ = {isa = PBXBuildFile; fileRef = 849057BF26A5FB2D002E3B3B /* CanvasLayer+Landscape.m */; };
+		849057C426A5FB45002E3B3B /* CanvasLayer+Tree.m in Sources */ = {isa = PBXBuildFile; fileRef = 849057C326A5FB45002E3B3B /* CanvasLayer+Tree.m */; };
 		84B38EE326A451DF0091109A /* ChoiceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B38EE126A451DF0091109A /* ChoiceController.m */; };
 		84B38EE826A452030091109A /* Canvas.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B38EE726A452030091109A /* Canvas.m */; };
 		84CB730626A2F62000CBFE43 /* DrawingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CB730426A2F62000CBFE43 /* DrawingController.swift */; };
@@ -41,8 +41,6 @@
 		3F52D4BE26A16CBF00DD272F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3F52D4C926A1729900DD272F /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		3F52D4CA26A1729900DD272F /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
-		3F931FFC26A5C12000F09261 /* HeadLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeadLayer.h; sourceTree = "<group>"; };
-		3F931FFD26A5C12000F09261 /* HeadLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeadLayer.m; sourceTree = "<group>"; };
 		3F93200126A5D37800F09261 /* CanvasLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CanvasLayer.h; sourceTree = "<group>"; };
 		3F93200226A5D37800F09261 /* CanvasLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CanvasLayer.m; sourceTree = "<group>"; };
 		3FB2318126A1C23A00410824 /* RoundedButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RoundedButton.h; sourceTree = "<group>"; };
@@ -56,12 +54,14 @@
 		8432571A26A2045300B6E05E /* ColorButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorButton.m; sourceTree = "<group>"; };
 		8432571F26A2249C00B6E05E /* ColorPanel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorPanel.h; sourceTree = "<group>"; };
 		8432572026A2249C00B6E05E /* ColorPanel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorPanel.m; sourceTree = "<group>"; };
-		849057A726A5F75E002E3B3B /* PlanetLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlanetLayer.h; sourceTree = "<group>"; };
-		849057A826A5F75E002E3B3B /* PlanetLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PlanetLayer.m; sourceTree = "<group>"; };
-		849057AB26A5F794002E3B3B /* LandscapeLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LandscapeLayer.h; sourceTree = "<group>"; };
-		849057AC26A5F794002E3B3B /* LandscapeLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LandscapeLayer.m; sourceTree = "<group>"; };
-		849057AF26A5F7A6002E3B3B /* TreeLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TreeLayer.h; sourceTree = "<group>"; };
-		849057B026A5F7A6002E3B3B /* TreeLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TreeLayer.m; sourceTree = "<group>"; };
+		849057B426A5F906002E3B3B /* CanvasLayer+Head.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CanvasLayer+Head.h"; sourceTree = "<group>"; };
+		849057B526A5F906002E3B3B /* CanvasLayer+Head.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CanvasLayer+Head.m"; sourceTree = "<group>"; };
+		849057BA26A5FB19002E3B3B /* CanvasLayer+Planet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CanvasLayer+Planet.h"; sourceTree = "<group>"; };
+		849057BB26A5FB19002E3B3B /* CanvasLayer+Planet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CanvasLayer+Planet.m"; sourceTree = "<group>"; };
+		849057BE26A5FB2D002E3B3B /* CanvasLayer+Landscape.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CanvasLayer+Landscape.h"; sourceTree = "<group>"; };
+		849057BF26A5FB2D002E3B3B /* CanvasLayer+Landscape.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CanvasLayer+Landscape.m"; sourceTree = "<group>"; };
+		849057C226A5FB45002E3B3B /* CanvasLayer+Tree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CanvasLayer+Tree.h"; sourceTree = "<group>"; };
+		849057C326A5FB45002E3B3B /* CanvasLayer+Tree.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CanvasLayer+Tree.m"; sourceTree = "<group>"; };
 		84B38EE026A451DF0091109A /* ChoiceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChoiceController.h; sourceTree = "<group>"; };
 		84B38EE126A451DF0091109A /* ChoiceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChoiceController.m; sourceTree = "<group>"; };
 		84B38EE626A452030091109A /* Canvas.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Canvas.h; sourceTree = "<group>"; };
@@ -124,14 +124,14 @@
 			children = (
 				3F93200126A5D37800F09261 /* CanvasLayer.h */,
 				3F93200226A5D37800F09261 /* CanvasLayer.m */,
-				3F931FFC26A5C12000F09261 /* HeadLayer.h */,
-				3F931FFD26A5C12000F09261 /* HeadLayer.m */,
-				849057A726A5F75E002E3B3B /* PlanetLayer.h */,
-				849057A826A5F75E002E3B3B /* PlanetLayer.m */,
-				849057AB26A5F794002E3B3B /* LandscapeLayer.h */,
-				849057AC26A5F794002E3B3B /* LandscapeLayer.m */,
-				849057AF26A5F7A6002E3B3B /* TreeLayer.h */,
-				849057B026A5F7A6002E3B3B /* TreeLayer.m */,
+				849057B426A5F906002E3B3B /* CanvasLayer+Head.h */,
+				849057B526A5F906002E3B3B /* CanvasLayer+Head.m */,
+				849057BA26A5FB19002E3B3B /* CanvasLayer+Planet.h */,
+				849057BB26A5FB19002E3B3B /* CanvasLayer+Planet.m */,
+				849057BE26A5FB2D002E3B3B /* CanvasLayer+Landscape.h */,
+				849057BF26A5FB2D002E3B3B /* CanvasLayer+Landscape.m */,
+				849057C226A5FB45002E3B3B /* CanvasLayer+Tree.h */,
+				849057C326A5FB45002E3B3B /* CanvasLayer+Tree.m */,
 			);
 			path = Layers;
 			sourceTree = "<group>";
@@ -256,18 +256,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				8432572126A2249C00B6E05E /* ColorPanel.m in Sources */,
+				849057C026A5FB2D002E3B3B /* CanvasLayer+Landscape.m in Sources */,
 				842DD94026A4C15800312D77 /* TimerController.swift in Sources */,
-				849057B126A5F7A6002E3B3B /* TreeLayer.m in Sources */,
+				849057B626A5F906002E3B3B /* CanvasLayer+Head.m in Sources */,
 				3F52D4AE26A16CBF00DD272F /* AppDelegate.m in Sources */,
+				849057C426A5FB45002E3B3B /* CanvasLayer+Tree.m in Sources */,
 				84CB730626A2F62000CBFE43 /* DrawingController.swift in Sources */,
 				84B38EE326A451DF0091109A /* ChoiceController.m in Sources */,
+				849057BC26A5FB19002E3B3B /* CanvasLayer+Planet.m in Sources */,
 				842DD93B26A479A400312D77 /* PaletteController.m in Sources */,
 				8432571B26A2045300B6E05E /* ColorButton.m in Sources */,
 				3F52D4BF26A16CBF00DD272F /* main.m in Sources */,
-				3F931FFE26A5C12000F09261 /* HeadLayer.m in Sources */,
 				3FB2318326A1C23A00410824 /* RoundedButton.m in Sources */,
-				849057A926A5F75E002E3B3B /* PlanetLayer.m in Sources */,
-				849057AD26A5F794002E3B3B /* LandscapeLayer.m in Sources */,
 				84B38EE826A452030091109A /* Canvas.m in Sources */,
 				3F93200326A5D37800F09261 /* CanvasLayer.m in Sources */,
 			);

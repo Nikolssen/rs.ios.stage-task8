@@ -1,5 +1,5 @@
 //
-//  PlanetLayer.h
+//  CanvasLayer+Tree.h
 //  rs.ios.stage-task8
 //
 //  Created by Admin on 19.07.2021.
@@ -9,8 +9,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface PlanetLayer : CanvasLayer
-
+@interface CanvasLayer (Tree)
++ (instancetype) canvasLayerTree;
 @end
 
 NS_ASSUME_NONNULL_END

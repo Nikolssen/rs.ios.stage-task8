@@ -6,7 +6,6 @@
 //
 
 #import "AppDelegate.h"
-#import "ViewController.h"
 #import "rs_ios_stage_task8-Swift.h"
 @interface AppDelegate ()
 

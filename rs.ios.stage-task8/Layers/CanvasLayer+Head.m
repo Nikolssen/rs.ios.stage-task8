@@ -1,23 +1,15 @@
 //
-//  HeadLayer.m
+//  CanvasLayer+Head.m
 //  rs.ios.stage-task8
 //
-//  Created by Ivan Budovich on 7/19/21.
+//  Created by Admin on 19.07.2021.
 //
 
-#import "HeadLayer.h"
+#import "CanvasLayer+Head.h"
 
-@implementation HeadLayer
-- (instancetype)init
-{
-    self = [super init];
-    if (self) {
-        [self setupSublayers];
-    }
-    return self;
-}
-
-- (void) setupSublayers{
+@implementation CanvasLayer (Head)
++ (instancetype) canvasLayerHead{
+    CanvasLayer* layer = [[CanvasLayer alloc] init];
     
     UIBezierPath* bezierPath = [UIBezierPath bezierPath];
     [bezierPath moveToPoint: CGPointMake(61.5, 29)];
@@ -146,12 +138,10 @@
     CAShapeLayer* layer3 = [CAShapeLayer new];
     layer3.fillColor = [UIColor.whiteColor colorWithAlphaComponent:0.0].CGColor;
     layer3.path = bezier3Path.CGPath;
-    self.layers = @[layer1, layer2, layer3];
-    [self addSublayer:layer1];
-    [self addSublayer:layer2];
-    [self addSublayer:layer3];
-    
+    layer.layers = @[layer1, layer2, layer3];
+    [layer addSublayer:layer1];
+    [layer addSublayer:layer2];
+    [layer addSublayer:layer3];
+    return layer;
 }
-
-
 @end

@@ -9,9 +9,12 @@ import UIKit
 
 @objc class DrawingController: UIViewController {
 
-    var selectedPicture: CanvasPicture = .planet
+    var selectedPicture: CanvasPicture = .landscape
     var selectedColors = [UIColor]()
     var time: Float = 1.0
+    var timer: Timer?
+    
+    @IBOutlet var canvas: Canvas!
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
@@ -53,6 +56,23 @@ import UIKit
         childVC.value = time
         view.addSubview(childVC.view)
         childVC.didMove(toParent: self)
+    }
+    @IBAction func drawAction(_ sender: Any) {
+        if timer == nil{
+            let step: Float = 1.0 / (60 * time)
+            let interval: Float = 1.0 / 60
+        let timer = Timer(timeInterval: TimeInterval(interval), repeats: true, block: {[weak self]
+            timer in
+            guard let self = self else { return }
+            self.canvas.grade += step
+            if (self.canvas.grade >= 1.0){
+                timer.invalidate()
+                self.timer = nil
+            }
+        })
+            self.timer = timer
+            RunLoop.current.add(timer, forMode: .default)
+    }
     }
 }
 

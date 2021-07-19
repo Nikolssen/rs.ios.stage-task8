@@ -1,5 +1,5 @@
 //
-//  LandscapeLayer.h
+//  CanvasLayer+Head.h
 //  rs.ios.stage-task8
 //
 //  Created by Admin on 19.07.2021.
@@ -9,8 +9,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface LandscapeLayer : CanvasLayer
-
+@interface CanvasLayer (Head)
++ (instancetype) canvasLayerHead;
 @end
 
 NS_ASSUME_NONNULL_END
