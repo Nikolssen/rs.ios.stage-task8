@@ -6,15 +6,55 @@
 //
 
 #import "Canvas.h"
+#import "HeadLayer.h"
+@interface Canvas()
+@property (nonatomic, strong) CanvasLayer* currentLayer;
+@end
 
 @implementation Canvas
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+- (void)awakeFromNib{
+    [super awakeFromNib];
+    [self configureLayer];
 }
-*/
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        [self configureLayer];
+    }
+    return self;
+}
+
+- (void) configureLayer{
+    HeadLayer* layer = [HeadLayer new];
+    layer.color1 = UIColor.blackColor;
+    layer.color2 = UIColor.blackColor;
+    layer.color3 = UIColor.blackColor;
+    self.currentLayer = layer;
+    [self.layer addSublayer:self.currentLayer];
+    
+}
+
+- (void)layoutSubviews{
+    [super layoutSubviews];
+    self.currentLayer.frame = self.bounds;
+}
+- (void)setColor1:(UIColor *)color1{
+    [self.currentLayer setColor1:color1];
+}
+
+- (void)setColor2:(UIColor *)color2{
+    [self.currentLayer setColor2:color2];
+}
+
+- (void)setColor3:(UIColor *)color3{
+    [self.currentLayer setColor3:color3];
+}
+
+- (void) setGrade:(float)grade{
+    _grade = grade;
+    self.currentLayer.grade = grade;
+}
 @end

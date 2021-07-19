@@ -44,6 +44,8 @@
     __weak typeof(self) weakSelf = self;
     self.timer = [NSTimer timerWithTimeInterval:1.0 repeats:NO block:^(NSTimer * _Nonnull timer) {
         weakSelf.view.backgroundColor = weakSelf.colors.lastObject;
+        [timer invalidate];
+        weakSelf.timer = nil;
     }];
     NSRunLoop* runloop = NSRunLoop.currentRunLoop;
     [runloop addTimer:self.timer forMode:NSDefaultRunLoopMode];

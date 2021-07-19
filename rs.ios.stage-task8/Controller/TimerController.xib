@@ -56,10 +56,11 @@
                     <nil key="textColor"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="vTL-qV-r2Y">
-                    <rect key="frame" x="95" y="100" width="225" height="30"/>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="5" translatesAutoresizingMaskIntoConstraints="NO" id="vTL-qV-r2Y">
+                    <rect key="frame" x="93.5" y="100" width="227" height="31"/>
                     <color key="tintColor" name="Light Green Sea"/>
                     <constraints>
+                        <constraint firstAttribute="height" constant="30" id="66E-NG-HD7"/>
                         <constraint firstAttribute="width" constant="223" id="bjZ-6a-rxX"/>
                     </constraints>
                     <connections>

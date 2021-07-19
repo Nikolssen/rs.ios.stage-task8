@@ -14,6 +14,8 @@
 		3F52D4BF26A16CBF00DD272F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F52D4BE26A16CBF00DD272F /* main.m */; };
 		3F52D4CB26A1729900DD272F /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F52D4C926A1729900DD272F /* Montserrat-Regular.ttf */; };
 		3F52D4CC26A1729900DD272F /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F52D4CA26A1729900DD272F /* Montserrat-Medium.ttf */; };
+		3F931FFE26A5C12000F09261 /* HeadLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F931FFD26A5C12000F09261 /* HeadLayer.m */; };
+		3F93200326A5D37800F09261 /* CanvasLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F93200226A5D37800F09261 /* CanvasLayer.m */; };
 		3FB2318326A1C23A00410824 /* RoundedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB2318226A1C23A00410824 /* RoundedButton.m */; };
 		842DD93B26A479A400312D77 /* PaletteController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842DD93926A479A400312D77 /* PaletteController.m */; };
 		842DD93C26A479A400312D77 /* PaletteController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 842DD93A26A479A400312D77 /* PaletteController.xib */; };
@@ -39,6 +41,10 @@
 		3F52D4BE26A16CBF00DD272F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3F52D4C926A1729900DD272F /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		3F52D4CA26A1729900DD272F /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		3F931FFC26A5C12000F09261 /* HeadLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeadLayer.h; sourceTree = "<group>"; };
+		3F931FFD26A5C12000F09261 /* HeadLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeadLayer.m; sourceTree = "<group>"; };
+		3F93200126A5D37800F09261 /* CanvasLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CanvasLayer.h; sourceTree = "<group>"; };
+		3F93200226A5D37800F09261 /* CanvasLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CanvasLayer.m; sourceTree = "<group>"; };
 		3FB2318126A1C23A00410824 /* RoundedButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RoundedButton.h; sourceTree = "<group>"; };
 		3FB2318226A1C23A00410824 /* RoundedButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RoundedButton.m; sourceTree = "<group>"; };
 		842DD93826A479A400312D77 /* PaletteController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaletteController.h; sourceTree = "<group>"; };
@@ -89,6 +95,7 @@
 		3F52D4AB26A16CBF00DD272F /* rs.ios.stage-task8 */ = {
 			isa = PBXGroup;
 			children = (
+				3F93200426A5D58600F09261 /* Layers */,
 				8432571826A2025000B6E05E /* Controller */,
 				8432571326A2020B00B6E05E /* View */,
 				8432571426A2021F00B6E05E /* Other */,
@@ -104,6 +111,17 @@
 				3F52D4C926A1729900DD272F /* Montserrat-Regular.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		3F93200426A5D58600F09261 /* Layers */ = {
+			isa = PBXGroup;
+			children = (
+				3F93200126A5D37800F09261 /* CanvasLayer.h */,
+				3F93200226A5D37800F09261 /* CanvasLayer.m */,
+				3F931FFC26A5C12000F09261 /* HeadLayer.h */,
+				3F931FFD26A5C12000F09261 /* HeadLayer.m */,
+			);
+			path = Layers;
 			sourceTree = "<group>";
 		};
 		8432571326A2020B00B6E05E /* View */ = {
@@ -236,8 +254,10 @@
 				842DD93B26A479A400312D77 /* PaletteController.m in Sources */,
 				8432571B26A2045300B6E05E /* ColorButton.m in Sources */,
 				3F52D4BF26A16CBF00DD272F /* main.m in Sources */,
+				3F931FFE26A5C12000F09261 /* HeadLayer.m in Sources */,
 				3FB2318326A1C23A00410824 /* RoundedButton.m in Sources */,
 				84B38EE826A452030091109A /* Canvas.m in Sources */,
+				3F93200326A5D37800F09261 /* CanvasLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
