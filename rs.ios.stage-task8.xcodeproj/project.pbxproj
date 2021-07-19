@@ -25,6 +25,7 @@
 		849057BC26A5FB19002E3B3B /* CanvasLayer+Planet.m in Sources */ = {isa = PBXBuildFile; fileRef = 849057BB26A5FB19002E3B3B /* CanvasLayer+Planet.m */; };
 		849057C026A5FB2D002E3B3B /* CanvasLayer+Landscape.m in Sources */ = {isa = PBXBuildFile; fileRef = 849057BF26A5FB2D002E3B3B /* CanvasLayer+Landscape.m */; };
 		849057C426A5FB45002E3B3B /* CanvasLayer+Tree.m in Sources */ = {isa = PBXBuildFile; fileRef = 849057C326A5FB45002E3B3B /* CanvasLayer+Tree.m */; };
+		849057CF26A622DF002E3B3B /* NSMutableArray+Shuffle.m in Sources */ = {isa = PBXBuildFile; fileRef = 849057CE26A622DF002E3B3B /* NSMutableArray+Shuffle.m */; };
 		84B38EE326A451DF0091109A /* ChoiceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B38EE126A451DF0091109A /* ChoiceController.m */; };
 		84B38EE826A452030091109A /* Canvas.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B38EE726A452030091109A /* Canvas.m */; };
 		84CB730626A2F62000CBFE43 /* DrawingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CB730426A2F62000CBFE43 /* DrawingController.swift */; };
@@ -62,6 +63,8 @@
 		849057BF26A5FB2D002E3B3B /* CanvasLayer+Landscape.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CanvasLayer+Landscape.m"; sourceTree = "<group>"; };
 		849057C226A5FB45002E3B3B /* CanvasLayer+Tree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CanvasLayer+Tree.h"; sourceTree = "<group>"; };
 		849057C326A5FB45002E3B3B /* CanvasLayer+Tree.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CanvasLayer+Tree.m"; sourceTree = "<group>"; };
+		849057CD26A622DF002E3B3B /* NSMutableArray+Shuffle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Shuffle.h"; sourceTree = "<group>"; };
+		849057CE26A622DF002E3B3B /* NSMutableArray+Shuffle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Shuffle.m"; sourceTree = "<group>"; };
 		84B38EE026A451DF0091109A /* ChoiceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChoiceController.h; sourceTree = "<group>"; };
 		84B38EE126A451DF0091109A /* ChoiceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChoiceController.m; sourceTree = "<group>"; };
 		84B38EE626A452030091109A /* Canvas.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Canvas.h; sourceTree = "<group>"; };
@@ -101,6 +104,7 @@
 		3F52D4AB26A16CBF00DD272F /* rs.ios.stage-task8 */ = {
 			isa = PBXGroup;
 			children = (
+				849057CA26A62001002E3B3B /* Category */,
 				3F93200426A5D58600F09261 /* Layers */,
 				8432571826A2025000B6E05E /* Controller */,
 				8432571326A2020B00B6E05E /* View */,
@@ -124,14 +128,6 @@
 			children = (
 				3F93200126A5D37800F09261 /* CanvasLayer.h */,
 				3F93200226A5D37800F09261 /* CanvasLayer.m */,
-				849057B426A5F906002E3B3B /* CanvasLayer+Head.h */,
-				849057B526A5F906002E3B3B /* CanvasLayer+Head.m */,
-				849057BA26A5FB19002E3B3B /* CanvasLayer+Planet.h */,
-				849057BB26A5FB19002E3B3B /* CanvasLayer+Planet.m */,
-				849057BE26A5FB2D002E3B3B /* CanvasLayer+Landscape.h */,
-				849057BF26A5FB2D002E3B3B /* CanvasLayer+Landscape.m */,
-				849057C226A5FB45002E3B3B /* CanvasLayer+Tree.h */,
-				849057C326A5FB45002E3B3B /* CanvasLayer+Tree.m */,
 			);
 			path = Layers;
 			sourceTree = "<group>";
@@ -179,6 +175,23 @@
 				842DD93F26A4C15800312D77 /* TimerController.xib */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		849057CA26A62001002E3B3B /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				849057B426A5F906002E3B3B /* CanvasLayer+Head.h */,
+				849057B526A5F906002E3B3B /* CanvasLayer+Head.m */,
+				849057BA26A5FB19002E3B3B /* CanvasLayer+Planet.h */,
+				849057BB26A5FB19002E3B3B /* CanvasLayer+Planet.m */,
+				849057BE26A5FB2D002E3B3B /* CanvasLayer+Landscape.h */,
+				849057BF26A5FB2D002E3B3B /* CanvasLayer+Landscape.m */,
+				849057C226A5FB45002E3B3B /* CanvasLayer+Tree.h */,
+				849057C326A5FB45002E3B3B /* CanvasLayer+Tree.m */,
+				849057CD26A622DF002E3B3B /* NSMutableArray+Shuffle.h */,
+				849057CE26A622DF002E3B3B /* NSMutableArray+Shuffle.m */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +273,7 @@
 				842DD94026A4C15800312D77 /* TimerController.swift in Sources */,
 				849057B626A5F906002E3B3B /* CanvasLayer+Head.m in Sources */,
 				3F52D4AE26A16CBF00DD272F /* AppDelegate.m in Sources */,
+				849057CF26A622DF002E3B3B /* NSMutableArray+Shuffle.m in Sources */,
 				849057C426A5FB45002E3B3B /* CanvasLayer+Tree.m in Sources */,
 				84CB730626A2F62000CBFE43 /* DrawingController.swift in Sources */,
 				84B38EE326A451DF0091109A /* ChoiceController.m in Sources */,

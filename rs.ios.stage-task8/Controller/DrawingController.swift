@@ -20,6 +20,8 @@ import UIKit
     var time: Float = 1.0
     var timer: Timer?
 
+    @IBOutlet var timerButton: RoundedButton!
+    @IBOutlet var paletteButton: RoundedButton!
     @IBOutlet var drawButton: RoundedButton!
     @IBOutlet var shareButton: RoundedButton!
     @IBOutlet var canvas: Canvas!
@@ -68,12 +70,15 @@ import UIKit
     @IBAction func drawAction(_ sender: Any) {
         if canvas.grade >= 1.0 {
             self.reset()
-            drawButton.isEnabled = false
         }
         else {
+            canvas.colors = selectedColors
+            canvas.resetColors()
             self.draw()
-            drawButton.isEnabled = false
         }
+        drawButton.isEnabled = false
+        paletteButton.isEnabled = false
+        timerButton.isEnabled = false
  
         
     }
@@ -90,6 +95,8 @@ import UIKit
                 self.timer = nil
                 self.drawButton.setTitle("Draw", for: .normal)
                 self.drawButton.isEnabled = true
+                self.paletteButton.isEnabled = true
+                self.timerButton.isEnabled = true
             }
             self.canvas.setNeedsDisplay()
         })
@@ -112,6 +119,8 @@ func draw(){
             self.timer = nil
             self.drawButton.setTitle("Reset", for: .normal)
             self.drawButton.isEnabled = true
+            self.paletteButton.isEnabled = true
+            self.timerButton.isEnabled = true
         }
         self.canvas.setNeedsDisplay()
     })

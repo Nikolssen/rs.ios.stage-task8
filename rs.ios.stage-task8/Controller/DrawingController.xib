@@ -14,7 +14,9 @@
             <connections>
                 <outlet property="canvas" destination="tVj-Y5-xpP" id="bZA-dF-0hj"/>
                 <outlet property="drawButton" destination="323-lY-NXF" id="Pjc-3g-MvJ"/>
+                <outlet property="paletteButton" destination="1aO-9J-OEg" id="06V-2B-ufq"/>
                 <outlet property="shareButton" destination="Omg-bP-WLW" id="Kp9-Zy-wCY"/>
+                <outlet property="timerButton" destination="7oN-ZI-fgr" id="sur-Uu-IGk"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

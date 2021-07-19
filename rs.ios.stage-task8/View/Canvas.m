@@ -11,6 +11,8 @@
 #import "CanvasLayer+Planet.h"
 #import "CanvasLayer+Landscape.h"
 #import "CanvasLayer+Tree.h"
+#import "NSMutableArray+Shuffle.h"
+
 @interface Canvas()
 @property (nonatomic, strong) CanvasLayer* currentLayer;
 @end
@@ -28,33 +30,25 @@
     }
     return self;
 }
-//
-//- (void) configureLayer{
-//    CanvasLayer* layer = [CanvasLayer canvasLayerHead];
-//    layer.color1 = UIColor.blackColor;
-//    layer.color2 = UIColor.blackColor;
-//    layer.color3 = UIColor.blackColor;
-//    self.currentLayer = layer;
-//    [self.layer addSublayer:self.currentLayer];
-//
-//}
 
 - (void)layoutSubviews{
     [super layoutSubviews];
     self.currentLayer.frame = self.bounds;
 }
-- (void)setColor1:(UIColor *)color1{
-    [self.currentLayer setColor1:color1];
-}
 
-- (void)setColor2:(UIColor *)color2{
-    [self.currentLayer setColor2:color2];
+-(void)resetColors{
+    NSMutableArray* colors = [self.colors mutableCopy];
+    if (colors.count < 3) {
+        while (colors.count != 3){
+            [colors addObject:UIColor.blackColor];
+        }
+    }
+    [colors shuffle];
+    [self.currentLayer setColor1:colors[0]];
+    [self.currentLayer setColor2:colors[1]];
+    [self.currentLayer setColor3:colors[2]];
+    
 }
-
-- (void)setColor3:(UIColor *)color3{
-    [self.currentLayer setColor3:color3];
-}
-
 - (void) setGrade:(float)grade{
     _grade = grade;
     self.currentLayer.grade = grade;

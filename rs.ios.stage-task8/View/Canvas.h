@@ -19,12 +19,9 @@ typedef NS_ENUM(NSUInteger, CanvasPicture){
 
 @property (nonatomic, assign) CanvasPicture picture;
 @property (nonatomic, assign) float grade;
+@property (nonatomic, strong) NSArray* colors;
 
-- (void)setColor1:(UIColor *)color1;
-
-- (void)setColor2:(UIColor *)color2;
-
-- (void)setColor3:(UIColor *)color3;
+- (void) resetColors;
 @end
 
 NS_ASSUME_NONNULL_END
