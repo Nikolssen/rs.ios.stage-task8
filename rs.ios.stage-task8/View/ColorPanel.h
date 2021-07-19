@@ -19,5 +19,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ColorPanel : UIView
 @property (weak, nonatomic) id<ColorPanelDelegate> delegate;
+- (void) activateColors: (NSArray<UIColor*>*) colors;
 @end
 NS_ASSUME_NONNULL_END

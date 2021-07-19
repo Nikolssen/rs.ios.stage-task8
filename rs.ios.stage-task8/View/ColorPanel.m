@@ -11,6 +11,7 @@
 @property (nonatomic, strong) UIStackView* stackView;
 
 @property (nonatomic, strong) NSMutableArray <ColorButton*>* selectedButtons;
+@property(nonatomic, strong) NSArray<ColorButton*>* buttons;
 @end
 @implementation ColorPanel
 
@@ -34,9 +35,12 @@
     
     NSArray<UIColor*>* colors1 = @[[UIColor colorNamed:@"RSRed"], [UIColor colorNamed:@"RSIndigo"], [UIColor colorNamed:@"RSGreen"], [UIColor colorNamed:@"RSGray"], [UIColor colorNamed:@"RSViolet"], [UIColor colorNamed:@"RSSalmon"]];
     NSArray<UIColor*>* colors2 = @[[UIColor colorNamed:@"RSOrange"], [UIColor colorNamed:@"RSCyan"], [UIColor colorNamed:@"RSPink"], [UIColor colorNamed:@"RSCyprus"], [UIColor colorNamed:@"RSDarkGreen"], [UIColor colorNamed:@"RSBrown"]];
-    
+    NSMutableArray* buttons = [NSMutableArray new];
     UIStackView* stackView1 = [self stackViewOfButtonsOfColors:colors1];
+    [buttons addObjectsFromArray:stackView1.arrangedSubviews];
     UIStackView* stackView2 = [self stackViewOfButtonsOfColors:colors2];
+    [buttons addObjectsFromArray:stackView2.arrangedSubviews];
+    self.buttons = [buttons copy];
     UIStackView* verticalStackView = [[UIStackView alloc] initWithArrangedSubviews:@[stackView1, stackView2]];
     verticalStackView.axis = UILayoutConstraintAxisVertical;
     verticalStackView.alignment = UIStackViewAlignmentFill;
@@ -70,7 +74,16 @@
     }
     return stackView;
 }
-
+-(void)activateColors:(NSArray<UIColor*>*)colors{
+    for (UIColor* color in colors){
+        for (ColorButton* button in self.buttons){
+            if ([button.keyColor isEqual:color]){
+                button.selected = YES;
+                [self.selectedButtons addObject:button];
+            }
+        }
+    }
+}
 - (void) buttonTapped: (ColorButton*) button{
     
     button.selected = !button.selected;

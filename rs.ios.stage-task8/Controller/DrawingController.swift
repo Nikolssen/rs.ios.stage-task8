@@ -10,7 +10,7 @@ import UIKit
 @objc class DrawingController: UIViewController {
 
     var selectedPicture: CanvasPicture = .planet
-    var selectedColors: [UIColor]?
+    var selectedColors = [UIColor]()
     var time: Float = 1.0
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +41,7 @@ import UIKit
         childVC.view.frame = CGRect(x: 0, y: view.frame.height/2, width: view.frame.width, height: view.frame.height/2 + 40)
         view.addSubview(childVC.view)
         childVC.didMove(toParent: self)
+        childVC.colors = self.selectedColors
         
     }
     

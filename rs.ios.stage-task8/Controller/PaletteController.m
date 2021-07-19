@@ -9,7 +9,7 @@
 #import "ColorPanel.h"
 @interface PaletteController () <ColorPanelDelegate>
 @property (strong, nonatomic) IBOutlet ColorPanel *colorPanel;
-@property (nonatomic, copy) NSArray <UIColor*>* colors;
+@property (nonatomic, strong) NSTimer* timer;
 @end
 
 @implementation PaletteController
@@ -26,13 +26,28 @@
 
     self.colorPanel.delegate = self;
 
+
+}
+- (void)setColors:(NSArray<UIColor *> *)colors{
+    [self.colorPanel activateColors:colors];
+    _colors = colors;
 }
 - (IBAction)saveTapped:(id)sender {
     [self.delegate paletteController:self WillDismissWithColors:self.colors];
 }
 
 - (void)colorPanel:(nonnull ColorPanel *)panel didSelectColors:(nonnull NSArray<UIColor *> *)colors {
-    self.colors = colors;
+    _colors = colors;
+    
+    [self.timer invalidate];
+    self.timer = nil;
+    __weak typeof(self) weakSelf = self;
+    self.timer = [NSTimer timerWithTimeInterval:1.0 repeats:NO block:^(NSTimer * _Nonnull timer) {
+        weakSelf.view.backgroundColor = weakSelf.colors.lastObject;
+    }];
+    NSRunLoop* runloop = NSRunLoop.currentRunLoop;
+    [runloop addTimer:self.timer forMode:NSDefaultRunLoopMode];
+    
 }
 
 

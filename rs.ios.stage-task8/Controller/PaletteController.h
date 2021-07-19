@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface PaletteController : UIViewController
 @property (nonatomic, weak) id<PaletteControllerDelegate> delegate;
+@property (nonatomic, copy) NSArray <UIColor*>* colors;
 @end
 
 
