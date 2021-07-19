@@ -9,6 +9,7 @@ import UIKit
 
 class TimerController: UIViewController {
     @IBOutlet var timeLabel: UILabel!
+    weak var delegate: TimerControllerDelegate?
     var value: Float? {
         willSet{
             guard newValue != nil else {return}
@@ -39,6 +40,11 @@ class TimerController: UIViewController {
     }
     
     @IBAction func saveTapped(_ sender: Any) {
+        delegate?.timerController(self, willDismissWithValue: value!)
     }
     
+}
+
+protocol TimerControllerDelegate: AnyObject {
+    func timerController(_ controller: TimerController, willDismissWithValue value: Float)
 }

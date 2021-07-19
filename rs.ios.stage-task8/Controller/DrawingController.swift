@@ -47,7 +47,7 @@ import UIKit
     @IBAction func openTimer(_ sender: Any) {
         let childVC = TimerController()
         self.addChild(childVC)
-        //childVC.delegate = self
+        childVC.delegate = self
         childVC.view.frame = CGRect(x: 0, y: view.frame.height/2, width: view.frame.width, height: view.frame.height/2 + 40)
         childVC.value = time
         view.addSubview(childVC.view)
@@ -68,9 +68,13 @@ extension DrawingController: PaletteControllerDelegate{
         controller.view.removeFromSuperview()
         controller.removeFromParent()
     }
-    
- 
-    
-    
-    
+}
+
+extension DrawingController: TimerControllerDelegate{
+    func timerController(_ controller: TimerController, willDismissWithValue value: Float) {
+        controller.willMove(toParent: nil)
+        controller.view.removeFromSuperview()
+        controller.removeFromParent()
+        time = value
+    }
 }
