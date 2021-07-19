@@ -8,35 +8,43 @@
 import UIKit
 
 @objc class DrawingController: UIViewController {
-
-    var selectedPicture: CanvasPicture = .landscape
+    
+    var selectedPicture: CanvasPicture = .landscape {
+        willSet{
+            if newValue != self.selectedPicture {
+                canvas.picture = newValue
+            }
+        }
+    }
     var selectedColors = [UIColor]()
     var time: Float = 1.0
     var timer: Timer?
-    
+
+    @IBOutlet var drawButton: RoundedButton!
+    @IBOutlet var shareButton: RoundedButton!
     @IBOutlet var canvas: Canvas!
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavigationBar()
-
+        canvas.picture = self.selectedPicture
     }
     
     
     private func setupNavigationBar() {
         navigationItem.title = "Artist"
         let barButtonItem = UIBarButtonItem(title: "Drawings", style: .plain, target: self, action: #selector(showMenu(sender:)))
-
+        
         navigationItem.rightBarButtonItem = barButtonItem;
     }
     
     
-   @objc func showMenu(sender: UIBarButtonItem){
+    @objc func showMenu(sender: UIBarButtonItem){
         let controller = ChoiceController(selectedPicture: selectedPicture)
         controller.delegate = self
         self.navigationController?.pushViewController(controller, animated: true)
-    
+        
     }
-
+    
     @IBAction func openPalette(_ sender: Any) {
         let childVC = PaletteController()
         self.addChild(childVC)
@@ -58,22 +66,59 @@ import UIKit
         childVC.didMove(toParent: self)
     }
     @IBAction func drawAction(_ sender: Any) {
-        if timer == nil{
-            let step: Float = 1.0 / (60 * time)
-            let interval: Float = 1.0 / 60
+        if canvas.grade >= 1.0 {
+            self.reset()
+            drawButton.isEnabled = false
+        }
+        else {
+            self.draw()
+            drawButton.isEnabled = false
+        }
+ 
+        
+    }
+    func reset(){
+        
+        let step: Float = 1.0 / 60
+        let interval: Float = 1.0 / 60
         let timer = Timer(timeInterval: TimeInterval(interval), repeats: true, block: {[weak self]
             timer in
             guard let self = self else { return }
-            self.canvas.grade += step
-            if (self.canvas.grade >= 1.0){
+            self.canvas.grade -= step
+            if (self.canvas.grade <= 0){
                 timer.invalidate()
                 self.timer = nil
+                self.drawButton.setTitle("Draw", for: .normal)
+                self.drawButton.isEnabled = true
             }
+            self.canvas.setNeedsDisplay()
         })
-            self.timer = timer
-            RunLoop.current.add(timer, forMode: .default)
+        self.timer = timer
+        RunLoop.current.add(timer, forMode: .default)
     }
-    }
+
+
+func draw(){
+   
+    self.canvas.setNeedsDisplay()
+    let step: Float = 1.0 / (60 * time)
+    let interval: Float = 1.0 / 60
+    let timer = Timer(timeInterval: TimeInterval(interval), repeats: true, block: {[weak self]
+        timer in
+        guard let self = self else { return }
+        self.canvas.grade += step
+        if (self.canvas.grade >= 1.0){
+            timer.invalidate()
+            self.timer = nil
+            self.drawButton.setTitle("Reset", for: .normal)
+            self.drawButton.isEnabled = true
+        }
+        self.canvas.setNeedsDisplay()
+    })
+    self.timer = timer
+    RunLoop.current.add(timer, forMode: .default)
+}
+
 }
 
 extension DrawingController: ChoiceControllerDelegate{

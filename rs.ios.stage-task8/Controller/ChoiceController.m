@@ -48,6 +48,7 @@
     [self.view addSubview:stackView];
     [NSLayoutConstraint activateConstraints:@[[stackView.topAnchor constraintEqualToAnchor:self.view.topAnchor constant:114], [stackView.widthAnchor constraintEqualToConstant:200], [stackView.heightAnchor constraintEqualToConstant:205], [stackView.centerXAnchor constraintEqualToAnchor: self.view.centerXAnchor]]];
     
+    self.buttons[self.selectedPicture].selected = YES;
 }
 
 - (void) selectItem: (RoundedButton*) sender{

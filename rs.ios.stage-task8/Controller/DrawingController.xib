@@ -13,6 +13,8 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DrawingController" customModule="rs_ios_stage_task8" customModuleProvider="target">
             <connections>
                 <outlet property="canvas" destination="tVj-Y5-xpP" id="bZA-dF-0hj"/>
+                <outlet property="drawButton" destination="323-lY-NXF" id="Pjc-3g-MvJ"/>
+                <outlet property="shareButton" destination="Omg-bP-WLW" id="Kp9-Zy-wCY"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>

@@ -12,8 +12,8 @@ NS_ASSUME_NONNULL_BEGIN
 @interface Canvas : UIView
 typedef NS_ENUM(NSUInteger, CanvasPicture){
     CanvasPicturePlanet,
-    CanvasPictureTree,
     CanvasPictureHead,
+    CanvasPictureTree,
     CanvasPictureLandscape
 };
 

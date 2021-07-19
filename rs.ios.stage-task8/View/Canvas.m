@@ -19,27 +19,25 @@
 
 - (void)awakeFromNib{
     [super awakeFromNib];
-    [self configureLayer];
 }
 
 - (instancetype)init
 {
     self = [super init];
     if (self) {
-        [self configureLayer];
     }
     return self;
 }
-
-- (void) configureLayer{
-    CanvasLayer* layer = [CanvasLayer canvasLayerHead];
-    layer.color1 = UIColor.blackColor;
-    layer.color2 = UIColor.blackColor;
-    layer.color3 = UIColor.blackColor;
-    self.currentLayer = layer;
-    [self.layer addSublayer:self.currentLayer];
-    
-}
+//
+//- (void) configureLayer{
+//    CanvasLayer* layer = [CanvasLayer canvasLayerHead];
+//    layer.color1 = UIColor.blackColor;
+//    layer.color2 = UIColor.blackColor;
+//    layer.color3 = UIColor.blackColor;
+//    self.currentLayer = layer;
+//    [self.layer addSublayer:self.currentLayer];
+//
+//}
 
 - (void)layoutSubviews{
     [super layoutSubviews];
@@ -79,8 +77,11 @@
             case CanvasPictureTree:
                 self.currentLayer = [CanvasLayer canvasLayerTree];
         }
-        self.currentLayer.grade = self.grade;
-        
+        [self.layer addSublayer:self.currentLayer];
+        self.currentLayer.grade = 0;
+        self.currentLayer.color1 = UIColor.blackColor;
+        self.currentLayer.color2 = UIColor.blackColor;
+        self.currentLayer.color3 = UIColor.blackColor;
     }
 }
 
