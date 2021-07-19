@@ -82,4 +82,15 @@
     }
     return self;
 }
+- (void)setEnabled:(BOOL)enabled{
+    self.selected = NO;
+    self.highlighted = NO;
+    [super setEnabled:enabled];
+    if (enabled){
+        self.alpha = 1;
+    }
+    else {
+        self.alpha = 0.5;
+    }
+}
 @end
