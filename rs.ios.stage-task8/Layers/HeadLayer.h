@@ -11,11 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface HeadLayer : CanvasLayer
-- (void)setColor1:(UIColor *)color1;
 
-- (void)setColor2:(UIColor *)color2;
-
-- (void)setColor3:(UIColor *)color3;
 @end
 
 NS_ASSUME_NONNULL_END
