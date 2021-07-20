@@ -68,6 +68,8 @@ import UIKit
         childVC.didMove(toParent: self)
     }
     @IBAction func drawAction(_ sender: Any) {
+        timer?.invalidate()
+        timer = nil
         if canvas.grade >= 1.0 {
             self.reset()
         }

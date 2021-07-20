@@ -21,14 +21,25 @@
 
 - (void)awakeFromNib{
     [super awakeFromNib];
+    [self setupBorders];
 }
 
 - (instancetype)init
 {
     self = [super init];
     if (self) {
+        [self setupBorders];
     }
     return self;
+}
+- (void)setupBorders{
+    self.layer.cornerRadius = 8;
+    self.layer.shadowRadius = 8.0;
+    self.layer.shadowOpacity = 0.5;
+    self.layer.shadowOffset = CGSizeMake(0, 0);
+    self.layer.masksToBounds = NO;
+    self.backgroundColor = UIColor.whiteColor;
+    self.layer.shadowColor = [UIColor colorNamed:@"Chill Sky"].CGColor;
 }
 
 - (void)layoutSubviews{
