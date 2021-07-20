@@ -25,12 +25,11 @@
     [bezierPath addCurveToPoint: CGPointMake(244.25, 247.75) controlPoint1: CGPointMake(221.08, 243.08) controlPoint2: CGPointMake(244.25, 238.95)];
     [bezierPath addCurveToPoint: CGPointMake(227.25, 255.75) controlPoint1: CGPointMake(244.25, 256.55) controlPoint2: CGPointMake(228.58, 254.92)];
     bezierPath.miterLimit = 4;
-    bezierPath.lineWidth = 0.5;
     bezierPath.lineCapStyle = kCGLineCapRound;
     CAShapeLayer* layer1 = [CAShapeLayer new];
     layer1.fillColor = [UIColor.whiteColor colorWithAlphaComponent:0.0].CGColor;
     layer1.path = bezierPath.CGPath;
-    
+    layer1.lineWidth = 0.5;
     
     UIBezierPath* bezier2Path = [UIBezierPath bezierPath];
     [bezier2Path moveToPoint: CGPointMake(82, 250.5)];

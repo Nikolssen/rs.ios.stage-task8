@@ -345,12 +345,12 @@
     [bezier3Path moveToPoint: CGPointMake(159.5, 174.5)];
     [bezier3Path addLineToPoint: CGPointMake(162, 181)];
     [bezier3Path addLineToPoint: CGPointMake(168.5, 188.5)];
-    bezier3Path.lineWidth = 0.5;
     bezier3Path.miterLimit = 4;
     bezier3Path.lineCapStyle = kCGLineCapRound;
     CAShapeLayer* layer3 = [CAShapeLayer new];
     layer3.fillColor = [UIColor.whiteColor colorWithAlphaComponent:0.0].CGColor;
     layer3.path = bezier3Path.CGPath;
+    layer3.lineWidth = 0.5;
     layer.layers = @[layer1, layer2, layer3];
     [layer addSublayer:layer1];
     [layer addSublayer:layer2];
