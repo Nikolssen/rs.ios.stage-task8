@@ -133,6 +133,8 @@ func draw(){
 extension DrawingController: ChoiceControllerDelegate{
     func didSelect(_ selectedPicture: CanvasPicture) {
         self.selectedPicture = selectedPicture
+        canvas.grade = 0.0
+        self.drawButton.setTitle("Draw", for: .normal)
     }
 }
 
