@@ -84,9 +84,11 @@ import UIKit
  
         
     }
+    @IBAction func shareAction(_ sender: Any) {
+    }
     func reset(){
         
-        let step: Float = 1.0 / 60
+        let step: Float = 1.0 / 30
         let interval: Float = 1.0 / 60
         let timer = Timer(timeInterval: TimeInterval(interval), repeats: true, block: {[weak self]
             timer in

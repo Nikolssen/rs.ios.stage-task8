@@ -34,12 +34,12 @@
 }
 - (void)setupBorders{
     self.layer.cornerRadius = 8;
-    self.layer.shadowRadius = 8.0;
+    self.layer.shadowRadius = 4.0;
     self.layer.shadowOpacity = 0.5;
     self.layer.shadowOffset = CGSizeMake(0, 0);
     self.layer.masksToBounds = NO;
     self.backgroundColor = UIColor.whiteColor;
-    self.layer.shadowColor = [UIColor colorNamed:@"Chill Sky"].CGColor;
+    self.layer.shadowColor = [[UIColor colorNamed:@"Chill Sky"] colorWithAlphaComponent:0.5].CGColor;
 }
 
 - (void)layoutSubviews{
@@ -61,8 +61,15 @@
     
 }
 - (void) setGrade:(float)grade{
-    _grade = grade;
-    self.currentLayer.grade = grade;
+    float newGrade = grade;
+    if (grade < 0){
+        newGrade = 0.0;
+    }
+    else if (grade > 1){
+        newGrade = 1.0;
+    }
+    _grade = newGrade;
+    self.currentLayer.grade = newGrade;
 }
 - (void) setPicture:(CanvasPicture)picture{
     if (_picture != picture){
