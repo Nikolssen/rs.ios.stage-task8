@@ -26,6 +26,15 @@
         layer.frame = self.bounds;
     }
 }
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.backgroundColor = UIColor.whiteColor.CGColor;
+    
+    }
+    return self;
+}
 
 -(void)setGrade:(float)grade{
     for (CAShapeLayer* layer in self.layers){

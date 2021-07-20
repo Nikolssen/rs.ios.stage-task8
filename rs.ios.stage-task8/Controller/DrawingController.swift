@@ -9,7 +9,7 @@ import UIKit
 
 @objc class DrawingController: UIViewController {
     
-    var selectedPicture: CanvasPicture = .landscape {
+    var selectedPicture: CanvasPicture = .head {
         willSet{
             if newValue != self.selectedPicture {
                 canvas.picture = newValue
@@ -29,6 +29,7 @@ import UIKit
         super.viewDidLoad()
         setupNavigationBar()
         canvas.picture = self.selectedPicture
+        self.resetState()
     }
     
     
@@ -81,11 +82,19 @@ import UIKit
         drawButton.isEnabled = false
         paletteButton.isEnabled = false
         timerButton.isEnabled = false
+        shareButton.isEnabled = false
  
         
     }
     @IBAction func shareAction(_ sender: Any) {
-    }
+        let imageRenderer = UIGraphicsImageRenderer(size: canvas.frame.size)
+        let image = imageRenderer.image{ctx in
+            return canvas.currentLayer.render(in: ctx.cgContext)
+        }
+        let activityController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+        present(activityController, animated: true, completion: nil)
+            }
+    
     func reset(){
         
         let step: Float = 1.0 / 30
@@ -97,10 +106,7 @@ import UIKit
             if (self.canvas.grade <= 0){
                 timer.invalidate()
                 self.timer = nil
-                self.drawButton.setTitle("Draw", for: .normal)
-                self.drawButton.isEnabled = true
-                self.paletteButton.isEnabled = true
-                self.timerButton.isEnabled = true
+                self.resetState()
             }
             self.canvas.setNeedsDisplay()
         })
@@ -123,8 +129,9 @@ func draw(){
             self.timer = nil
             self.drawButton.setTitle("Reset", for: .normal)
             self.drawButton.isEnabled = true
-            self.paletteButton.isEnabled = true
-            self.timerButton.isEnabled = true
+            self.paletteButton.isEnabled = false
+            self.timerButton.isEnabled = false
+            self.shareButton.isEnabled = true
         }
         self.canvas.setNeedsDisplay()
     })
@@ -132,13 +139,20 @@ func draw(){
     RunLoop.current.add(timer, forMode: .default)
 }
 
+    func resetState(){
+        self.drawButton.setTitle("Draw", for: .normal)
+        self.drawButton.isEnabled = true
+        self.paletteButton.isEnabled = true
+        self.timerButton.isEnabled = true
+        self.shareButton.isEnabled = false
+    }
 }
 
 extension DrawingController: ChoiceControllerDelegate{
     func didSelect(_ selectedPicture: CanvasPicture) {
         self.selectedPicture = selectedPicture
         canvas.grade = 0.0
-        self.drawButton.setTitle("Draw", for: .normal)
+        resetState()
     }
 }
 

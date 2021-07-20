@@ -13,9 +13,9 @@
 #import "CanvasLayer+Tree.h"
 #import "NSMutableArray+Shuffle.h"
 
-@interface Canvas()
-@property (nonatomic, strong) CanvasLayer* currentLayer;
-@end
+//@interface Canvas()
+//
+//@end
 
 @implementation Canvas
 
@@ -74,7 +74,6 @@
 - (void) setPicture:(CanvasPicture)picture{
     if (_picture != picture){
         [self.currentLayer removeFromSuperlayer];
-        self.currentLayer = nil;
         _picture = picture;
         switch (picture) {
             case CanvasPictureHead:

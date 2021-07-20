@@ -20,7 +20,7 @@ typedef NS_ENUM(NSUInteger, CanvasPicture){
 @property (nonatomic, assign) CanvasPicture picture;
 @property (nonatomic, assign) float grade;
 @property (nonatomic, strong) NSArray* colors;
-
+@property (nonatomic, strong) CanvasLayer* currentLayer;
 - (void) resetColors;
 @end
 
