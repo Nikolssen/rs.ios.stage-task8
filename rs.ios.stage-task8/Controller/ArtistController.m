@@ -27,11 +27,15 @@
     self.canvas.picture = self.selectedPicture;
     self.selectedColors = @[];
     self.selectedPicture = CanvasPictureHead;
+    self.value = 1.0;
 }
 
 -(void)setSelectedPicture:(CanvasPicture)selectedPicture{
-    if (_selectedPicture != selectedPicture)
+    if (_selectedPicture != selectedPicture){
+        self.canvas.picture = selectedPicture;
+    }
         _selectedPicture = selectedPicture;
+    
 }
 
 - (void) setupNavigationBar{

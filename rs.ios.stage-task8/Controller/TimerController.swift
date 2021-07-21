@@ -10,10 +10,13 @@ import UIKit
 public class TimerController: UIViewController {
     @IBOutlet var timeLabel: UILabel!
     @objc public weak var delegate: TimerControllerDelegate!
-    @objc public var value: Float = 1.0 {
+    @objc public var value: Float = 0.0 {
         willSet{
             if value != newValue{
                 timeLabel.text = String.localizedStringWithFormat("%.02f s", newValue)
+                if value != slider.value{
+                    slider.value = newValue
+                }
             }
 
             
@@ -42,9 +45,6 @@ public class TimerController: UIViewController {
         delegate?.timerController(self, willDismissWithValue: value)
     }
     
-    @objc public func setValue(value: NSNumber){
-        self.value = value.floatValue
-    }
 }
 
 @objc public protocol TimerControllerDelegate {
