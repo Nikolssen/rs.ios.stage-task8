@@ -15,6 +15,8 @@
 		3F52D4CC26A1729900DD272F /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3F52D4CA26A1729900DD272F /* Montserrat-Medium.ttf */; };
 		3F93200326A5D37800F09261 /* CanvasLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F93200226A5D37800F09261 /* CanvasLayer.m */; };
 		3FB2318326A1C23A00410824 /* RoundedButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FB2318226A1C23A00410824 /* RoundedButton.m */; };
+		8405666326A87FC2000C1D2F /* ArtistController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8405666226A87FC2000C1D2F /* ArtistController.m */; };
+		8405666A26A88900000C1D2F /* DrawingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8405666826A88900000C1D2F /* DrawingsController.swift */; };
 		842DD93B26A479A400312D77 /* PaletteController.m in Sources */ = {isa = PBXBuildFile; fileRef = 842DD93926A479A400312D77 /* PaletteController.m */; };
 		842DD93C26A479A400312D77 /* PaletteController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 842DD93A26A479A400312D77 /* PaletteController.xib */; };
 		842DD94026A4C15800312D77 /* TimerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842DD93E26A4C15800312D77 /* TimerController.swift */; };
@@ -26,10 +28,8 @@
 		849057C026A5FB2D002E3B3B /* CanvasLayer+Landscape.m in Sources */ = {isa = PBXBuildFile; fileRef = 849057BF26A5FB2D002E3B3B /* CanvasLayer+Landscape.m */; };
 		849057C426A5FB45002E3B3B /* CanvasLayer+Tree.m in Sources */ = {isa = PBXBuildFile; fileRef = 849057C326A5FB45002E3B3B /* CanvasLayer+Tree.m */; };
 		849057CF26A622DF002E3B3B /* NSMutableArray+Shuffle.m in Sources */ = {isa = PBXBuildFile; fileRef = 849057CE26A622DF002E3B3B /* NSMutableArray+Shuffle.m */; };
-		84B38EE326A451DF0091109A /* ChoiceController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B38EE126A451DF0091109A /* ChoiceController.m */; };
 		84B38EE826A452030091109A /* Canvas.m in Sources */ = {isa = PBXBuildFile; fileRef = 84B38EE726A452030091109A /* Canvas.m */; };
-		84CB730626A2F62000CBFE43 /* DrawingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CB730426A2F62000CBFE43 /* DrawingController.swift */; };
-		84CB730726A2F62000CBFE43 /* DrawingController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84CB730526A2F62000CBFE43 /* DrawingController.xib */; };
+		84CB730726A2F62000CBFE43 /* ArtistController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84CB730526A2F62000CBFE43 /* ArtistController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +46,9 @@
 		3F93200226A5D37800F09261 /* CanvasLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CanvasLayer.m; sourceTree = "<group>"; };
 		3FB2318126A1C23A00410824 /* RoundedButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RoundedButton.h; sourceTree = "<group>"; };
 		3FB2318226A1C23A00410824 /* RoundedButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RoundedButton.m; sourceTree = "<group>"; };
+		8405666126A87FC2000C1D2F /* ArtistController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArtistController.h; sourceTree = "<group>"; };
+		8405666226A87FC2000C1D2F /* ArtistController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ArtistController.m; sourceTree = "<group>"; };
+		8405666826A88900000C1D2F /* DrawingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingsController.swift; sourceTree = "<group>"; };
 		842DD93826A479A400312D77 /* PaletteController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaletteController.h; sourceTree = "<group>"; };
 		842DD93926A479A400312D77 /* PaletteController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaletteController.m; sourceTree = "<group>"; };
 		842DD93A26A479A400312D77 /* PaletteController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaletteController.xib; sourceTree = "<group>"; };
@@ -65,13 +68,10 @@
 		849057C326A5FB45002E3B3B /* CanvasLayer+Tree.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "CanvasLayer+Tree.m"; sourceTree = "<group>"; };
 		849057CD26A622DF002E3B3B /* NSMutableArray+Shuffle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Shuffle.h"; sourceTree = "<group>"; };
 		849057CE26A622DF002E3B3B /* NSMutableArray+Shuffle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Shuffle.m"; sourceTree = "<group>"; };
-		84B38EE026A451DF0091109A /* ChoiceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChoiceController.h; sourceTree = "<group>"; };
-		84B38EE126A451DF0091109A /* ChoiceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChoiceController.m; sourceTree = "<group>"; };
 		84B38EE626A452030091109A /* Canvas.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Canvas.h; sourceTree = "<group>"; };
 		84B38EE726A452030091109A /* Canvas.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Canvas.m; sourceTree = "<group>"; };
 		84CB72FF26A2F5DB00CBFE43 /* rs.ios.stage-task8-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "rs.ios.stage-task8-Bridging-Header.h"; sourceTree = "<group>"; };
-		84CB730426A2F62000CBFE43 /* DrawingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawingController.swift; sourceTree = "<group>"; };
-		84CB730526A2F62000CBFE43 /* DrawingController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DrawingController.xib; sourceTree = "<group>"; };
+		84CB730526A2F62000CBFE43 /* ArtistController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArtistController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -164,15 +164,15 @@
 		8432571826A2025000B6E05E /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				84B38EE026A451DF0091109A /* ChoiceController.h */,
-				84B38EE126A451DF0091109A /* ChoiceController.m */,
-				84CB730426A2F62000CBFE43 /* DrawingController.swift */,
-				84CB730526A2F62000CBFE43 /* DrawingController.xib */,
+				8405666126A87FC2000C1D2F /* ArtistController.h */,
+				8405666226A87FC2000C1D2F /* ArtistController.m */,
+				84CB730526A2F62000CBFE43 /* ArtistController.xib */,
 				842DD93826A479A400312D77 /* PaletteController.h */,
 				842DD93926A479A400312D77 /* PaletteController.m */,
 				842DD93A26A479A400312D77 /* PaletteController.xib */,
 				842DD93E26A4C15800312D77 /* TimerController.swift */,
 				842DD93F26A4C15800312D77 /* TimerController.xib */,
+				8405666826A88900000C1D2F /* DrawingsController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -256,7 +256,7 @@
 				3F52D4CC26A1729900DD272F /* Montserrat-Medium.ttf in Resources */,
 				842DD94126A4C15800312D77 /* TimerController.xib in Resources */,
 				842DD93C26A479A400312D77 /* PaletteController.xib in Resources */,
-				84CB730726A2F62000CBFE43 /* DrawingController.xib in Resources */,
+				84CB730726A2F62000CBFE43 /* ArtistController.xib in Resources */,
 				3F52D4B926A16CBF00DD272F /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -269,16 +269,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				8432572126A2249C00B6E05E /* ColorPanel.m in Sources */,
+				8405666326A87FC2000C1D2F /* ArtistController.m in Sources */,
 				849057C026A5FB2D002E3B3B /* CanvasLayer+Landscape.m in Sources */,
 				842DD94026A4C15800312D77 /* TimerController.swift in Sources */,
 				849057B626A5F906002E3B3B /* CanvasLayer+Head.m in Sources */,
 				3F52D4AE26A16CBF00DD272F /* AppDelegate.m in Sources */,
 				849057CF26A622DF002E3B3B /* NSMutableArray+Shuffle.m in Sources */,
 				849057C426A5FB45002E3B3B /* CanvasLayer+Tree.m in Sources */,
-				84CB730626A2F62000CBFE43 /* DrawingController.swift in Sources */,
-				84B38EE326A451DF0091109A /* ChoiceController.m in Sources */,
 				849057BC26A5FB19002E3B3B /* CanvasLayer+Planet.m in Sources */,
 				842DD93B26A479A400312D77 /* PaletteController.m in Sources */,
+				8405666A26A88900000C1D2F /* DrawingsController.swift in Sources */,
 				8432571B26A2045300B6E05E /* ColorButton.m in Sources */,
 				3F52D4BF26A16CBF00DD272F /* main.m in Sources */,
 				3FB2318326A1C23A00410824 /* RoundedButton.m in Sources */,

@@ -6,7 +6,7 @@
 //
 
 #import "AppDelegate.h"
-#import "rs_ios_stage_task8-Swift.h"
+#import "ArtistController.h"
 @interface AppDelegate ()
 
 @end
@@ -16,7 +16,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     UIWindow* window = [[UIWindow alloc] initWithFrame:UIScreen.mainScreen.bounds];
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:[[DrawingController alloc] init]];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:[[ArtistController alloc] init]];
     window.rootViewController = navigationController;
     [self setupAppearence];
     self.window = window;

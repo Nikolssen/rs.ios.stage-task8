@@ -7,21 +7,23 @@
 
 import UIKit
 
-class TimerController: UIViewController {
+public class TimerController: UIViewController {
     @IBOutlet var timeLabel: UILabel!
-    weak var delegate: TimerControllerDelegate?
-    var value: Float? {
+    @objc public weak var delegate: TimerControllerDelegate!
+    @objc public var value: Float = 0.0 {
         willSet{
-            guard newValue != nil else {return}
-            if value == nil {
-                slider.value = newValue!
+            if value != newValue{
+                timeLabel.text = String.localizedStringWithFormat("%.02f s", newValue)
+                if value != slider.value{
+                    slider.value = newValue
+                }
             }
-            timeLabel.text = String.localizedStringWithFormat("%.02f s", newValue!)
+
             
         }
     }
     @IBOutlet var slider: UISlider!
-    override func viewDidLoad() {
+    public override func viewDidLoad() {
         super.viewDidLoad()
         view.layer.masksToBounds = false
         view.clipsToBounds = false
@@ -40,11 +42,11 @@ class TimerController: UIViewController {
     }
     
     @IBAction func saveTapped(_ sender: Any) {
-        delegate?.timerController(self, willDismissWithValue: value!)
+        delegate?.timerController(self, willDismissWithValue: value)
     }
     
 }
 
-protocol TimerControllerDelegate: AnyObject {
+@objc public protocol TimerControllerDelegate {
     func timerController(_ controller: TimerController, willDismissWithValue value: Float)
 }
